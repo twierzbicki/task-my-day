@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/event_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:tag="event_view"
+    android:text="@string/app_name">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="fill_horizontal|fill_vertical"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:id="@+id/row_buttons"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="Cancel"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="Confirm"
+                android:text="confirm" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_eventName"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/eventName"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/eventName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/form_hint"
+                android:inputType="textPersonName"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_group"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/group"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/group"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:entries="@array/group"
+                android:prompt="@string/group_prompt"
+                android:spinnerMode="dialog"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_syncable"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/syncable"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/syncable"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:entries="@array/syncable"
+                android:prompt="@string/syncable_prompt"
+                android:spinnerMode="dialog"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_type"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/type"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:entries="@array/type"
+                android:prompt="@string/type_prompt"
+                android:spinnerMode="dialog"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_description"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/description"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/form_hint"
+                android:inputType="text"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_created"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/created"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/created"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="date"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_dueDate"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/dueDate"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/dueDate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:hint="@string/form_hint"
+                android:onClick="showDatePickerDialog"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_priority"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/priority"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/priority"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:entries="@array/priority"
+                android:prompt="@string/priority_prompt"
+                android:spinnerMode="dialog"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_place"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/place"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/place"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/form_hint"
+                android:inputType="text" />
+        </TableRow>
+    </TableLayout>
+</android.support.design.widget.CoordinatorLayout>
